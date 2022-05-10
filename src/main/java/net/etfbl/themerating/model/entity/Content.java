@@ -6,6 +6,7 @@ import lombok.Setter;
 
 import javax.persistence.*;
 import java.sql.Date;
+import java.time.LocalDateTime;
 
 @Entity(name = "content")
 @Getter
@@ -19,7 +20,7 @@ public class Content {
 
     private long clientID;
 
-    private Date DateTime;
+    private LocalDateTime DateTime;
 
     private String Info;
 

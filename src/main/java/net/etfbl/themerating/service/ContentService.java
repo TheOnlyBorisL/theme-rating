@@ -16,6 +16,7 @@ import org.springframework.stereotype.Service;
 import java.sql.Date;
 import java.time.Instant;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -84,7 +85,7 @@ public class ContentService {
 
         Content result = new Content();
         result.setInfo(gson.toJson(comprehendResult));
-        result.setDateTime(Date.valueOf(LocalDate.now()));
+        result.setDateTime(LocalDateTime.now());
         result.setClientID(request.getClientID());
         _contentRepository.saveAndFlush(result);
     }
